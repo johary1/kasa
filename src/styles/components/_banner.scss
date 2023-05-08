@@ -1,0 +1,13 @@
+.banner {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  @include center;
+  margin: auto 50px;
+  border-radius: 20px;
+}
+
+.banner-text {
+  color: white;
+  font-size: 24px;
+}
