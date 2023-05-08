@@ -1,13 +1,13 @@
 import React from "react";
 import Header from "../components/header/Header";
 
-const Home = () => {
+const DetailHome = () => {
   return (
     <div>
       <Header />
-      <h1>Ma page d'accueil</h1>
+      <h1>Page détail logement</h1>
     </div>
   );
 };
 
-export default Home;
+export default DetailHome;

@@ -1,3 +1,132 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(../assets/font/Montserrat-Italic-VariableFont_wght.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Monserrat, sans-serif;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: aqua;
+  background: rgb(243, 243, 243);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  color: #ff6060;
+}
+.header .logo {
+  font-size: 3rem;
+  letter-spacing: 1.5px;
+}
+.header .logo img {
+  width: 26px;
+  height: 27px;
+  margin: auto 1.5px;
+}
+
+.navigation {
+  margin-left: 10px;
+}
+.navigation ul {
+  display: flex;
+  margin-top: 10px;
+}
+.navigation ul a {
+  text-decoration: none;
+  padding: 10px;
+}
+.navigation ul a li {
+  color: #ff6060;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.navigation ul a li:hover {
+  color: #ff6060;
+}
+.navigation ul .nav-active {
+  position: relative;
+}
+.navigation ul .nav-active::after {
+  content: "";
+  height: 4px;
+  width: 0;
+  background: #ff6060;
+  position: absolute;
+  border-radius: 10px;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: anim 0.6s ease forwards;
+}
+@keyframes anim {
+  to {
+    width: 100%;
+  }
+}
+
+.footer {
+  justify-content: space-between;
+  background-color: #000000;
+  color: rgb(243, 243, 243);
+  padding: 50px;
+}
+.footer .logo-footer {
+  color: rgb(243, 243, 243);
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto 30px auto;
+}
+.footer .logo-footer img {
+  width: 26px;
+  height: 23px;
+  margin: 2px 1.5px 0 1.5px;
+  color: rgb(243, 243, 243);
+}
+.footer p {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(243, 243, 243);
+  font-size: 24px;
+}
+
+p,
+.back-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff6060;
+}
+
+.title-404 {
+  font-size: 14rem;
+}
+
+.text-404 {
+  font-size: 36px;
+}
+
+.back-home {
+  font-size: 18px;
+  margin: 50px auto;
+  text-decoration: underline !important;
+}
+.back-home a {
+  color: #ff6060;
 }/*# sourceMappingURL=index.css.map */

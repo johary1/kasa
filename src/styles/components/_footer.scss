@@ -1,0 +1,25 @@
+.footer {
+  justify-content: space-between;
+  background-color: $black;
+  color: $white;
+  padding: 50px;
+
+  .logo-footer {
+    color: $white;
+    font-size: 2.5rem;
+    @include center;
+    margin: 20px auto 30px auto;
+    img {
+      width: 26px;
+      height: 23px;
+      margin: 2px 1.5px 0 1.5px;
+      color: $white;
+    }
+  }
+  p {
+    margin-top: 10px;
+    @include center;
+    color: $white;
+    font-size: 24px;
+  }
+}

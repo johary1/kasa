@@ -1,0 +1,21 @@
+p,
+.back-home {
+  @include center;
+  color: $red-1;
+}
+.title-404 {
+  font-size: 14rem;
+}
+
+.text-404 {
+  font-size: 36px;
+}
+
+.back-home {
+  font-size: 18px;
+  margin: 50px auto;
+  text-decoration: underline !important;
+  a {
+    color: $red-1;
+  }
+}
