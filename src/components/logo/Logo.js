@@ -1,9 +1,10 @@
 import React from "react";
 
-const Logo = () => {
+const Logo = (props) => {
+  const { color, imgSrc } = props;
   return (
-    <div className="logo">
-      K<img src="./favicon.png" alt="logo Kasa" />
+    <div className="logo" style={{ color: color }}>
+      K<img src={imgSrc} alt="logo Kasa" />
       sa
     </div>
   );

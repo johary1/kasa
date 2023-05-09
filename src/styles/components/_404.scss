@@ -1,7 +1,7 @@
 p,
 .back-home {
   @include center;
-  color: $red-1;
+  color: $red;
 }
 .title-404 {
   font-size: 14rem;
@@ -16,6 +16,6 @@ p,
   margin: 50px auto;
   text-decoration: underline !important;
   a {
-    color: $red-1;
+    color: $red;
   }
 }
