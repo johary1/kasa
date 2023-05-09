@@ -1,11 +1,12 @@
 import React from "react";
 import Header from "../components/header/Header";
+import Banner from "../components/header/Banner";
 
 const DetailHome = () => {
   return (
     <div>
       <Header />
-      <h1>Page détail logement</h1>
+      <Banner backgroundImage="./bg_detail.png" />
     </div>
   );
 };

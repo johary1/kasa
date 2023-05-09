@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/header/Header";
 import Banner from "../components/header/Banner";
 import Collapse from "../components/collapse/Collapse";
+import Footer from "../components/footer/Footer";
 
 const collapseData = [
   {
@@ -38,6 +39,7 @@ const About = () => {
           description={data.description}
         />
       ))}
+      <Footer />
     </div>
   );
 };

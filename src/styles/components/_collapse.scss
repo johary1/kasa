@@ -1,6 +1,7 @@
 .collapsible {
-  margin: 100px;
+  margin: auto 100px;
   padding: 20px;
+  min-width: 310px;
 }
 .collapsible-header {
   display: flex;
@@ -19,8 +20,8 @@
   background-repeat: no-repeat;
   background-position: center;
   text-indent: -9999px;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 13px;
   border: none;
   cursor: pointer;
 }
