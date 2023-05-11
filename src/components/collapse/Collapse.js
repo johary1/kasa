@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 
-const Collapse = (props) => {
-  const { label, description } = props;
+const Collapse = ({ label, description, width }) => {
   const [isOpen, setIsOpen] = useState(false);
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="collapsible">
+    <div className="collapsible" style={{ width }}>
       <div className="collapsible-header">
         <div className="collapsible-label">{label}</div>
         <button
@@ -19,7 +18,17 @@ const Collapse = (props) => {
       </div>
       {isOpen && (
         <div className="collapsible-body">
-          <div className="collapsible-description">{description}</div>
+          <div className="collapsible-description">
+            {Array.isArray(description) ? (
+              <ul>
+                {description.map((item, index) => (
+                  <li key={`${item}-${index}`}>{item}</li>
+                ))}
+              </ul>
+            ) : (
+              description
+            )}
+          </div>
         </div>
       )}
     </div>

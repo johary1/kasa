@@ -1,3 +1,16 @@
+.collapsible-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1023px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+  .collapsible-container > * {
+    flex: 1;
+  }
+}
+
 .collapsible {
   display: block;
   margin: 50px auto;
