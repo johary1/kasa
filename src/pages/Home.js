@@ -3,6 +3,7 @@ import Header from "../components/header/Header";
 import Banner from "../components/header/Banner";
 import Card from "../components/card/Card";
 import data from "../data/room.json";
+import Footer from "../components/footer/Footer";
 
 const Home = () => {
   return (
@@ -14,9 +15,15 @@ const Home = () => {
       />
       <div className="card-container">
         {data.rooms.map((room) => (
-          <Card key={room.id} backgroundImage={room.cover} title={room.title} />
+          <Card
+            id={room.id}
+            key={room.id}
+            backgroundImage={room.cover}
+            title={room.title}
+          />
         ))}
       </div>
+      <Footer />
     </div>
   );
 };

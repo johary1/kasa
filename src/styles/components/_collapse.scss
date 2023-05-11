@@ -1,7 +1,9 @@
 .collapsible {
-  margin: auto 100px;
+  display: block;
+  margin: 50px auto;
   padding: 20px;
   min-width: 310px;
+  max-width: 1023px;
 }
 .collapsible-header {
   display: flex;
@@ -40,4 +42,5 @@
   color: $red;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  max-width: 1023px;
 }

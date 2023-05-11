@@ -2,11 +2,14 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const Card = (props) => {
-  const { title, backgroundImage } = props;
+  const { id, title, backgroundImage } = props;
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/iddynamic");
+    navigate({
+      pathname: `/room-${id}`,
+      state: { id },
+    });
   };
 
   return (
