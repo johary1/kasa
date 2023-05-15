@@ -10,7 +10,7 @@
 }
 
 body {
-  background: rgb(243, 243, 243);
+  background: #ffffff;
 }
 
 a {
@@ -93,32 +93,225 @@ li {
   font-size: 24px;
 }
 
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 13px 0 13px;
+  margin-bottom: 50px;
+}
+
+.card {
+  background-size: cover;
+  height: 340px;
+  width: 340px;
+  border-radius: 10px;
+  margin-top: 50px;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 10px;
+  color: white;
+  font-size: 18px;
+}
+
+.gallery {
+  position: relative;
+  max-width: 1240px;
+  margin: 0 auto 50px auto;
+}
+
+.gallery-image-container {
+  display: flex;
+  align-items: center;
+}
+
+.gallery-prev-button,
+.gallery-next-button {
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.gallery-prev-button {
+  left: 100px;
+}
+
+.gallery-next-button {
+  right: 100px;
+}
+
+.gallery-counter {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.gallery-image {
+  width: 90%;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 25px;
+}
+
+.info-room {
+  margin: 0 75px;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "title-location" "tags" "rating-host";
+}
+.info-room-title-location {
+  grid-area: title-location;
+  display: flex;
+  flex-direction: column;
+}
+.info-room-tags {
+  grid-area: tags;
+  display: flex;
+  list-style: none;
+}
+.info-room-tags li {
+  margin-right: 10px;
+}
+.info-room-rating-host {
+  grid-area: rating-host;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info-room-rating-host-star {
+  margin-right: 5px;
+}
+.info-room-rating-host-star--filled {
+  color: red;
+}
+.info-room-rating-host-star--empty {
+  color: lightgray;
+}
+.info-room-host {
+  display: flex;
+  align-items: center;
+}
+.info-room-host-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+@media (min-width: 768px) {
+  .info-room {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "title-location host" "tags rating";
+  }
+  .info-room-title-location, .info-room-tags {
+    justify-content: flex-start;
+  }
+  .info-room-rating-host {
+    justify-content: flex-end;
+  }
+  .info-room-rating-host-star {
+    margin-left: 5px;
+  }
+}
+
+.collapsible-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1023px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1200px) {
+  .collapsible-container > * {
+    flex: 1;
+  }
+}
+.collapsible {
+  display: block;
+  margin: 20px auto;
+  padding: 20px;
+  min-width: 310px;
+  max-width: 1023px;
+}
+
+.collapsible-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ff6060;
+  color: #ffffff;
+  padding: 0 10px;
+  border-radius: 5px;
+  height: 47px;
+  max-width: 1023px;
+}
+
+.collapsible-toggle {
+  background: #ff6060;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-indent: -9999px;
+  width: 24px;
+  height: 13px;
+  border: none;
+  cursor: pointer;
+}
+
+.collapsible-toggle.open {
+  background-image: url("../../assets/image/toggle-up.png");
+}
+
+.collapsible-toggle.closed {
+  background-image: url("../../assets/image/toggle-down.png");
+}
+
+.collapsible-body {
+  padding: 20px 10px;
+  background: #f6f6f6;
+  color: #ff6060;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  max-width: 1023px;
+}
+
 .footer {
   justify-content: space-between;
   background-color: #000000;
-  color: rgb(243, 243, 243);
+  color: #ffffff;
   padding: 50px;
 }
-.footer .logo-footer {
-  color: rgb(243, 243, 243);
+.footer .logo {
+  color: #ffffff;
   font-size: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 20px auto 30px auto;
 }
-.footer .logo-footer img {
+.footer .logo img {
   width: 26px;
   height: 23px;
   margin: 2px 1.5px 0 1.5px;
-  color: rgb(243, 243, 243);
+  color: #ffffff;
 }
 .footer p {
   margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: rgb(243, 243, 243);
+  color: #ffffff;
   font-size: 24px;
 }
 

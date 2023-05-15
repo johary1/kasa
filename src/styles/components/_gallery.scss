@@ -1,0 +1,43 @@
+.gallery {
+  position: relative;
+  max-width: 1240px;
+  margin: 0 auto 50px auto;
+}
+
+.gallery-image-container {
+  display: flex;
+  align-items: center;
+}
+
+.gallery-prev-button,
+.gallery-next-button {
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.gallery-prev-button {
+  left: 100px;
+}
+
+.gallery-next-button {
+  right: 100px;
+}
+
+.gallery-counter {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.gallery-image {
+  width: 90%;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 25px;
+}

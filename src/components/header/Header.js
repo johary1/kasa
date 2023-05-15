@@ -6,7 +6,7 @@ const headerColor = "#ff6060";
 const Header = () => {
   return (
     <div className="header">
-      <Logo color={headerColor} imgSrc="./favicon.png" />
+      <Logo color={headerColor} imgSrc="/favicon.png" />
       <Navigation />
     </div>
   );

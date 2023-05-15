@@ -1,8 +1,11 @@
 @import "./global";
+@import "./responsive.scss";
 @import "./components/header";
 @import "./components/navigation";
 @import "./components/banner";
 @import "./components/card";
+@import "./components/gallery";
+@import "./components/infoRoom";
 @import "./components/collapse";
 @import "./components/footer";
 @import "./components/404";

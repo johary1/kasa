@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/header/Header";
-import Banner from "../components/header/Banner";
+import Banner from "../components/banner/Banner";
 import Card from "../components/card/Card";
 import data from "../data/room.json";
 import Footer from "../components/footer/Footer";

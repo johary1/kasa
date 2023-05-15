@@ -6,10 +6,7 @@ const Card = (props) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate({
-      pathname: `/room-${id}`,
-      state: { id },
-    });
+    navigate(`/appartement/${id}`, { state: { id } });
   };
 
   return (
