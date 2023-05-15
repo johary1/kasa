@@ -8,6 +8,13 @@
   display: flex;
   align-items: center;
 }
+.gallery-prev-button img,
+.gallery-next-button img {
+  @include devices(mobile) {
+    width: 35px;
+    height: 35px;
+  }
+}
 
 .gallery-prev-button,
 .gallery-next-button {
@@ -19,10 +26,16 @@
 
 .gallery-prev-button {
   left: 100px;
+  @include devices(mobile) {
+    left: 50px;
+  }
 }
 
 .gallery-next-button {
   right: 100px;
+  @include devices(mobile) {
+    right: 50px;
+  }
 }
 
 .gallery-counter {
