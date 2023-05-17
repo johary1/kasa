@@ -1,69 +1,105 @@
 .info-room {
-  margin: 0 75px;
+  border: 1px solid $red;
   display: grid;
-  grid-template-rows: repeat(3, auto);
-  grid-template-areas:
-    "title-location"
-    "tags"
-    "rating-host";
+  gap: 10px;
 
-  &-title-location {
-    grid-area: title-location;
-    display: flex;
-    flex-direction: column;
+  @include devices(tablet-up) {
+    margin: auto 60px 50px;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "title-location info-user"
+      "tag rating";
   }
+  @include devices(tablet) {
+    margin: auto 30px 50px 30px;
+  }
+  @include devices(mobile) {
+    margin: auto 40px 100px 40px;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "title-location title-location"
+      "tag tag"
+      "rating info-user";
+  }
+}
 
-  &-tags {
-    grid-area: tags;
-    display: flex;
-    list-style: none;
+.info-room-title-location {
+  grid-area: title-location;
+  color: $red;
+}
+
+.info-room-tags {
+  grid-area: tag;
+  ul {
+    display: inline-flex;
 
     li {
-      margin-right: 10px;
+      color: $white;
+      background: $red;
+      margin-right: 15px;
+      @include devices(tablet-up) {
+        padding: 5px 15px 5px 15px;
+      }
+      @include devices(mobile) {
+        padding: 5px 15px 5px 15px;
+        font-size: 12px;
+      }
+      border-radius: 5px;
     }
   }
+}
 
-  &-rating-host {
-    grid-area: rating-host;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    &-star {
+.info-room-rating {
+  grid-area: rating;
+  @include devices(tablet-up) {
+    text-align: right;
+  }
+  @include devices(mobile) {
+    margin-top: 20px;
+  }
+  img {
+    @include devices(tablet-up) {
+      margin-right: 15px;
+    }
+    @include devices(mobile) {
       margin-right: 5px;
     }
+    width: 20px;
   }
+}
 
-  &-host {
-    display: flex;
-    align-items: center;
-
-    &-picture {
-      width: 50px;
-      height: 50px;
+.info-room-host {
+  grid-area: info-user;
+  color: $red;
+  @include devices(tablet-up) {
+    text-align: right;
+    position: relative;
+    .info-room-host-name {
+      position: absolute;
+      top: 10px;
+      right: 110px;
+      width: 20px;
+    }
+    .info-room-host-picture {
       border-radius: 50%;
       margin-right: 10px;
+      width: 20%;
     }
   }
-
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(2, auto);
-    grid-template-areas:
-      "title-location host"
-      "tags rating";
-
-    &-title-location,
-    &-tags {
-      justify-content: flex-start;
+  @include devices(mobile) {
+    position: relative;
+    .info-room-host-name {
+      position: absolute;
+      top: 10px;
+      left: 40%;
+      width: 20px;
     }
-
-    &-rating-host {
-      justify-content: flex-end;
-
-      &-star {
-        margin-left: 5px;
-      }
+    .info-room-host-picture {
+      border-radius: 50%;
+      width: 20%;
+      margin-left: 64%;
     }
   }
 }

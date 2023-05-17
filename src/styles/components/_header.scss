@@ -4,12 +4,26 @@
   padding: 50px;
   color: $red;
   .logo {
+    @include devices(mobile-xs) {
+      font-size: 1.1em;
+      letter-spacing: 0.5px;
+      margin-top: 18px;
+    }
     font-size: 3rem;
     letter-spacing: 1.5px;
+
     img {
       width: 26px;
       height: 27px;
       margin: auto 1.5px;
+    }
+  }
+
+  @include devices(mobile-xs) {
+    .logo img {
+      width: 15px;
+      height: 13px;
+      margin: 1.5px 1.5px 0px;
     }
   }
 }

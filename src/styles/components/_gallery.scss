@@ -1,6 +1,6 @@
 .gallery {
   position: relative;
-  max-width: 1240px;
+
   margin: 0 auto 50px auto;
 }
 
@@ -11,8 +11,8 @@
 .gallery-prev-button img,
 .gallery-next-button img {
   @include devices(mobile) {
-    width: 35px;
-    height: 35px;
+    width: 25px;
+    height: 25px;
   }
 }
 
@@ -27,14 +27,14 @@
 .gallery-prev-button {
   left: 100px;
   @include devices(mobile) {
-    left: 50px;
+    left: 70px;
   }
 }
 
 .gallery-next-button {
   right: 100px;
   @include devices(mobile) {
-    right: 50px;
+    right: 70px;
   }
 }
 
@@ -49,8 +49,13 @@
 }
 
 .gallery-image {
-  width: 90%;
-  height: 400px;
+  @include devices(tablet-up) {
+    width: 92%;
+    height: 400px;
+  }
+  @include devices(mobile) {
+    width: 78%;
+  }
   margin: 0 auto;
   border-radius: 25px;
 }
