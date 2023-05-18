@@ -32,13 +32,15 @@ const About = () => {
     <div>
       <Header />
       <Banner backgroundImage="./bg_about.png" />
-      {collapseData.map((data) => (
-        <Collapse
-          key={data.label}
-          label={data.label}
-          description={data.description}
-        />
-      ))}
+      <div className="collapse-about-container">
+        {collapseData.map((data) => (
+          <Collapse
+            key={data.label}
+            label={data.label}
+            description={data.description}
+          />
+        ))}
+      </div>
       <Footer />
     </div>
   );

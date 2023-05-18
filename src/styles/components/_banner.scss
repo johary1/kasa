@@ -5,9 +5,18 @@
   @include center;
   margin: auto 50px;
   border-radius: 20px;
+  @include devices(mobile-xs) {
+    margin: auto 38px;
+  }
 }
 
 .banner-text {
   color: white;
   font-size: 24px;
+  @include devices(mobile) {
+    font-size: 18px;
+  }
+  @include devices(mobile-xs) {
+    font-size: 16px;
+  }
 }

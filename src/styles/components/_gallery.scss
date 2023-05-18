@@ -1,6 +1,5 @@
 .gallery {
   position: relative;
-
   margin: 0 auto 50px auto;
 }
 
@@ -11,8 +10,8 @@
 .gallery-prev-button img,
 .gallery-next-button img {
   @include devices(mobile) {
-    width: 25px;
-    height: 25px;
+    width: 15px;
+    height: 15px;
   }
 }
 
@@ -25,16 +24,16 @@
 }
 
 .gallery-prev-button {
-  left: 100px;
+  left: 8%;
   @include devices(mobile) {
-    left: 70px;
+    left: 15%;
   }
 }
 
 .gallery-next-button {
-  right: 100px;
+  right: 8%;
   @include devices(mobile) {
-    right: 70px;
+    right: 15%;
   }
 }
 
@@ -49,11 +48,18 @@
 }
 
 .gallery-image {
-  @include devices(tablet-up) {
+  object-fit: cover;
+  @include devices(desktop) {
     width: 92%;
     height: 400px;
   }
+  @include devices(tablet) {
+    width: 88%;
+  }
   @include devices(mobile) {
+    width: 84%;
+  }
+  @include devices(mobile-xs) {
     width: 78%;
   }
   margin: 0 auto;

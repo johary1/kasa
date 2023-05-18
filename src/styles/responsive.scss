@@ -1,6 +1,6 @@
 @mixin devices($breakpoint) {
   @if $breakpoint == mobile-xs {
-    @media only screen and (max-width: 380px) {
+    @media only screen and (max-width: 378px) {
       @content;
     }
   }
@@ -23,6 +23,12 @@
 
   @if $breakpoint == desktop {
     @media only screen and (min-width: 992px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop-up {
+    @media only screen and (min-width: 1025px) {
       @content;
     }
   }

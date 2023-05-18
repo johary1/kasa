@@ -21,5 +21,8 @@
     @include center;
     color: $white;
     font-size: 24px;
+    @include devices(mobile) {
+      text-align: center;
+    }
   }
 }
